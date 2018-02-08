@@ -2,6 +2,8 @@
 
 > A Vue.js project
 
+> URL: https://prai-vmark.github.io/vue-test
+
 ## Build Setup
 
 ``` bash
