@@ -41,7 +41,7 @@
       </table>
     </div>
             <div class="lookup-control">
-          <button class="button is-primary is-outlined" disabled={!this.state.selectedCryptos.length} onClick={this.submitCallback}>
+          <button class="button is-primary is-outlined" :disabled="!selectedCryptos.length" @click="submitCallback">
             Add to Portfolio
           </button>
           <button :disabled="!selectedCryptos.length" class="button is-danger cancel-btn is-outlined" @click="cancelLookup">
@@ -144,7 +144,10 @@ export default {
     },
     cancelLookup: function() {
       this.selectedCryptos = [];
-    }
+    },
+    submitCallback: function() {
+      alert('Some callback with current data');
+    },
   },
   components: {
     CoinCard,
